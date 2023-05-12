@@ -19,7 +19,7 @@ export default function Responsive_Navbar() {
         <Link href="/">
           <span className="flex items-center">
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Mubashir
             </span>
           </span>
         </Link>
