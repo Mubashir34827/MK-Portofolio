@@ -12,7 +12,7 @@ export default function Services() {
                 <div className="flex flex-wrap -m-4 dark:text-gray-950">
                     {services.map((item) => (
                         <div key={item.id} className="lg:px-4 lg:py-2 px-4 md:py-2 py-4 md:w-1/4 sm:w-1/2 w-full">
-                            <div style={{height: '300px'}} className="border-2 border-blue-900 shadow-lg shadow-blue-900 xs:text-center sm:text-center md:text-start lg:text-start px-6 py-4 rounded-3xl hover:shadow-xl hover:bg-blue-900 dark:hover:bg-blue-500 dark:bg-white text-blue-900 hover:text-white dark:hover:text-white-900 hover:shadow-blue-200">
+                            <div style={{height: '300px'}} className="border-2 border-blue-900 shadow-lg shadow-blue-900 xs:text-center sm:text-center md:text-start lg:text-start px-6 py-4 rounded-3xl hover:shadow-xl hover:bg-blue-900 dark:hover:bg-blue-500 dark:border-blue-500 dark:bg-white text-blue-900 hover:text-white dark:hover:text-white-900 hover:shadow-blue-200">
                                 {item.icon}
                                 <h2 className="title-font font-bold text-xl">{item.title}</h2>
                                 <p className="leading-relaxed">{item.description}</p>
