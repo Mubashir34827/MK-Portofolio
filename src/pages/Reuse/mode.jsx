@@ -9,7 +9,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <button className="fixed bottom-5 right-4 lg:right-2 px-2 py-2 text-sm font-medium rounded-full bg-blue-700 text-white dark:bg-blue-700 dark:text-white"
+      <button className="fixed top-16 right-4 lg:top-16 lg:right-2 md:top-16 md:right-2 sm:top-16 sm:right-4 xs:top-16 xs:right-4 px-2 py-2 text-sm font-medium rounded-full bg-blue-900 text-white dark:bg-blue-500 dark:text-white"
         onClick={toggleDarkMode}>
         {theme === 'light' ? (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
