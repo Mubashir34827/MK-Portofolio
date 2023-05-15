@@ -1,5 +1,10 @@
 import Link from "next/link"
 import { useState } from 'react';
+import Head from "next/head";
+
+
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Header() {
 
@@ -14,16 +19,38 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const router = useRouter();
+  const { asPath } = router;
+
+  const titleMap = {
+    "/Components/home": "Home",
+    "/Components/profile": "Profile",
+    "/Components/services": "Services",
+    "/Components/about": "About",
+    "/Components/skills": "Skills",
+    "/Components/contact": "Contact Us",
+  };
+
+  useEffect(() => {
+    const currentTitle = titleMap[asPath] || "Default Title";
+    document.title = currentTitle;
+  }, [asPath]);
+  
+  
+
   return (
     <>
-      <div className="hidden lg:block md:block sm:hidden xs:hidden">
-        <header className="text-gray-600 body-font border-b">
+       <Head>
+        <title>Home</title>
+      </Head>
+      <div className="hidden lg:block md:block sm:hidden xs:hidden fixed top-0 left-0 right-0">
+        <header className="text-gray-600 body-font border-b bg-white dark:bg-black">
           <div className="container mx-auto flex flex-wrap py-3 lg:px-12 flex-col md:flex-row items-center">
               <Link href='/Components/home' className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 dark:text-white">
-                  <h1 className="ml-3 text-3xl font-bold">Portofolio</h1>
+                  <h1 className="ml-3 text-3xl font-bold">Mubashir</h1>
               </Link>
               <nav className="mx-auto flex flex-wrap items-center text-base justify-center">
-                <Link href="/Components/home" className="text-xl text-black font-medium mr-5 hover:underline dark:text-white">
+                <Link href="/Components/profile" className="text-xl text-black font-medium mr-5 hover:underline dark:text-white">
                   Home
                 </Link>
                 <Link href="/Components/services" className="text-xl text-black font-medium mr-5 hover:underline dark:text-white">
@@ -48,10 +75,10 @@ export default function Header() {
       <div className="lg:hidden md:hidden sm:block xs:block">
         <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
-            <Link href="/">
+            <Link href="/Components/home">
               <span className="flex items-center">
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Portofolio
+                  Mubashir
                 </span>
               </span>
             </Link>
@@ -67,7 +94,7 @@ export default function Header() {
             <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full`} id="navbar-hamburger">
               <ul className="flex flex-col font-medium mt-4 mr-11 rounded-lg bg-gray-50 dark:bg-gray-800">
                 <li>
-                <Link href='/Components/home' className={`block py-2 pl-3 pr-4 rounded ${ activeLink === '/Components/home'
+                <Link href='/Components/profile' className={`block py-2 pl-3 pr-4 rounded ${ activeLink === '/Components/home'
                       ? 'text-white bg-blue-700 dark:bg-blue-500' : 'text-gray-900 dark:text-white hover:bg-gray-100'}`}
                       onClick={() => handleLinkClick('/Components/home')} aria-current={activeLink === '/Components/home' ? 'page' : undefined}>
                     <span>

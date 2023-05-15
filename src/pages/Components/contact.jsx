@@ -3,7 +3,7 @@ import { contactBar } from '../api/hello'
 export default function Contact() {
   return (
     <>
-        <section className="text-gray-600 dark:text-white mb-8 pt-8 lg:px-48 md:px-16 sm:px-12 xs:px-4 body-font ">
+        <section className="text-gray-600 dark:text-white mb-8 lg:mt-24 md:mt-20 sm:mt-12 mt-10 lg:px-48 md:px-16 sm:px-12 xs:px-4 body-font ">
             <div className="px-6">
                 <h1 className="ps-2 pb-2 text-3xl font-bold">Get In <span className="text-blue-500">Touch</span></h1>
                 <hr />
@@ -13,7 +13,7 @@ export default function Contact() {
                     <div className="text-gray-600 body-font">
                         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2">
                             {contactBar.map((item) => (
-                                <div key={item.id} className="p-2 sm:w-2/2 w-full">
+                                <div key={item.id} className="p-2 w-full">
                                     <div className="bg-gray-100 rounded flex p-4 h-full items-center">
                                         {item.icon}
                                         <span className="title-font ps-4 font-medium hover:text-blue-600">
@@ -26,12 +26,12 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 md:w-1/2 sm:w-2/2 xs:w-2/2 bg-white dark:bg-transparent flex-col md:ml-auto w-full md:py-8 md:mt-0">
-                    <div className="mx-10">
+                    <div className="lg:mx-10 md:mx-5 sm:mx-4 xs:mx-2 mx-2">
                         <div className="flex flex-wrap py-10 -m-2">
-                            <div className="p-2 w-1/2">
+                            <div className="p-2 lg:w-1/2 md:w-1/2 w-full">
                                 <input type="text" id="name" name="name" placeholder="Name" className="w-full bg-gray-100 dark:bg-white bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
-                            <div className="p-2 w-1/2">
+                            <div className="p-2 lg:w-1/2 md:w-1/2 w-full">
                             <div className="relative">
                                 <input type="email" id="email" name="email" placeholder="Email" className="w-full bg-gray-100 dark:bg-white bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
@@ -45,7 +45,7 @@ export default function Contact() {
                                 </button>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>

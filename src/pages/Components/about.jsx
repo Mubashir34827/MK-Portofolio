@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <>
-      <section className='lg:px-28 md:px-20 sm:px-12 mb-32 xs:px-2'>
+      <section className='lg:px-28 lg:mt-24 lg:mb-28 md:my-20 md:px-16 sm:px-10 xs:px-2'>
         <h1 className="text-6xl font-bold mt-8 text-center text-blue-500 dark:text-white">About</h1>
         <p className='text-xl text-center text-gray-400 dark:text-gray-50 py-4 mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, laborum!</p>
         <div className="flex flex-col md:flex-row">
