@@ -32,7 +32,7 @@ export default function Header() {
   };
 
   useEffect(() => {
-    const currentTitle = titleMap[asPath] || "Default Title";
+    const currentTitle = titleMap[asPath] || "Home";
     document.title = currentTitle;
   }, [asPath]);
   
