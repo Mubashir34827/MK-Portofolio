@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import MK from '../../../public/Imgs/MK.jpg'
+// import MK from '../../../public/Imgs/MK.jpg'
+import MK from '../../../public/Imgs/test_profile.png'
 import { useState, useEffect } from 'react';
 
 const items = ['web developer', 'Programmer', 'Data scientist'];
@@ -39,7 +40,7 @@ export default function Profile() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 md:w-1/2 w-full h-96">
-                    <Image className="lg:object-fill md:object-fill h-96 lg:w-96 md:w-96 lg:ms-32" alt="Mubashir" style={{borderRadius: '20px'}} src={MK} />
+                    <Image className="lg:object-fill md:object-fill h-[450px] lg:w-96 md:w-96 lg:ms-32" alt="Mubashir" style={{borderRadius: '20px'}} src={MK} />
                 </div>
             </div>
         </section>

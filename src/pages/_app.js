@@ -1,8 +1,8 @@
 import "<next>/styles/globals.css";
 import { ThemeProvider } from 'next-themes';
-import Footer from "./Reuse/footer";
-import Mode from './Reuse/mode';
-import Header from './Reuse/Navbar'
+import Footer from "./utils/footer";
+import Mode from './utils/mode';
+import Header from './utils/Navbar'
 
 export default function App({ Component, pageProps }) {
 
